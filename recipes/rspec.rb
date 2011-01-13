@@ -1,6 +1,6 @@
-gem 'rspec-rails', '>= 2.4.1', :group => [:development]
+gem 'rspec-rails', '>= 2.4.1', :group => "development"
 
-stategies << lambda do
+strategies << lambda do
   generate 'rspec:install'
   
   spec_helper_path = 'spec/spec_helper.rb'

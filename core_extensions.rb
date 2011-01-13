@@ -2,16 +2,16 @@ module Rails
   module Generators
     module Actions
 
-      attr_accessor :stategies
+      attr_accessor :strategies
       attr_reader :template_options
 
       def initialize_templater
-        @stategies = []
+        @strategies = []
         @template_options = {}
       end
       
-      def execute_stategies
-        stategies.each {|stategy| stategy.call }
+      def execute_strategies
+        strategies.each {|stategy| stategy.call }
       end
 
       def load_options
@@ -41,6 +41,13 @@ module Rails
 
       def template_path(name)
         File.join(File.dirname(__FILE__), 'templates', name)
+      end
+      
+      def check_rvmrc
+        if yes?("Are you using RVM? [y|n]: ", Thor::Shell::Color::GREEN) 
+          gemset = ask("What ruby version and gemset are you using? [e.g. 1.9.2-head@aelogica]").downcase
+          create_file( ".rvmrc", "rvm use #{gemset}")
+        end
       end
 
     end
