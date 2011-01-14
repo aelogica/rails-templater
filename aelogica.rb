@@ -1,13 +1,13 @@
-# This assumes that you have installed these gems:
-# gem install bundler
-# gem install rails
-# 
-# ---------- IMPORTANT! ------------ 
-# This also assumes that you are using a gemset with the same name as your app
-# Please ensure that you already have an rvm gemset in use otherwise this will all install in your currrent gem environment
-# rails new my_new_app -m aelogica.rb
-# will generate an rvmrc file like this:
-# rvm use 1.9.2-head@my_new_app
+puts "# This assumes that you have installed these gems:"
+puts "# gem install bundler"
+puts "# gem install rails"
+puts "# "
+puts "# ---------- IMPORTANT! ------------ "
+puts "# This also assumes that you are using a gemset with the same name as your app"
+puts "# Please ensure that you already have an rvm gemset in use otherwise this will all install in your currrent gem environment"
+puts "# rails new my_new_app -m aelogica.rb"
+puts "# will generate an rvmrc file like this:"
+puts "# rvm use 1.9.2-head@my_new_app"
 
 require File.join(File.dirname(__FILE__), 'core_extensions.rb')
 
@@ -31,3 +31,7 @@ environment load_snippet('generators', 'rails')
 
 git :add => "."
 git :commit => "-m 'Initial commit'"  
+
+puts "---------- Congratulations! Your app was successfully generated! ---------------"
+puts "# if you have included authlogic, you will now have a user in the database named 'admin' with the password 'admin'. Enjoy!"
+puts "--------------------------------------------------------------------------------"
