@@ -1,7 +1,8 @@
 h1. TODO
 
+* Add database.yml defaults
+* Add checking for which database to use
+* Add cucumber templates for authlogic
 * Write a generator for FactoryGirl which uses the 2.0.0 syntax
-* Clean up questions to users during template run
 * Make choices agnostic
 * Add a choice to load a local configuration YAML with defaults for template input
-* Update Mongoid to RC once stabalized
